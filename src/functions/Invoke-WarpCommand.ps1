@@ -33,7 +33,7 @@ function Invoke-WarpCommand{
 	switch ($NameOrCommand) {
 		'add' { Add-WarpPoint $Name }
 		'remove' { Remove-WarpPoint $Name }
-		'list' { Get-WarpTable }
+		'list' { Get-WarpTable | Format-List }
 		Default { Set-LocationByWarpPoint $NameOrCommand }
 	}	
 }
